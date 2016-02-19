@@ -1,0 +1,41 @@
+{
+  "name": "hermione-tunnel",
+  "version": "0.0.0",
+  "description": "Plugin for setting up ssh tunnel while running tests with Hermione",
+  "keywords": [
+    "hermione",
+    "hermione-plugin",
+    "ssh",
+    "test",
+    "tunnel"
+  ],
+  "author": "Alexey Rybakov <alexrybakov@yandex.ru> (https://github.com/flackus)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gemini-testing/hermione-tunnel/"
+  },
+  "homepage": "https://github.com/gemini-testing/hermione-tunnel/",
+  "bugs": "https://github.com/gemini-testing/hermione-tunnel/issues",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "lint": "jshint . && jscs .",
+    "test-unit": "istanbul test _mocha -- --recursive test/",
+    "test": "npm run lint && npm run test-unit"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "ssh-tun": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.1.0",
+    "istanbul": "^0.4.1",
+    "jscs": "^2.6.0",
+    "jshint": "^2.8.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  }
+}
