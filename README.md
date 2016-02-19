@@ -8,11 +8,11 @@ Plugin for setting up ssh tunnel while running tests with Hermione.
 
 ## Configuration
 
-- __host__ `String` Address of remote host to which tunnel will be established.
-- __ports__ `Object` Ports range on remote host, port will be picked randomly from this range. If you want to set specific port, __min__ and __max__ values must be the same.
-- __ports.min__ `Number` Min port number.
-- __ports.max__ `Number` Max port number.
-- __localport__ `Number|Function` Available port on local machine. If set to `Function`, it should return `Promise`. If promise is rejected, plugin will fail.
+- __host__ (mandatory) `String` Address of remote host to which tunnel will be established.
+- __ports__ (mandatory) `Object` Ports range on remote host, port will be picked randomly from this range. If you want to set specific port, __min__ and __max__ values must be the same.
+- __ports.min__ (mandatory) `Number` Min port number.
+- __ports.max__ (mandatory) `Number` Max port number.
+- __localport__ (mandatory) `Number|Function` Available port on local machine. If set to `Function`, it should return `Promise` which will be resolved with the actual port number. If promise is rejected, plugin will fail.
 - __enabled__ (optional) `Boolean` Determines whether plugin is enabled. If set to `false` plugin will do nothing. Defaults to `true`.
 - __retries__ (optional) `Number` of attempts to establish tunnel. Defaults to `5`.
 - __protocol__ (optional) `String` Protocol which will be used in resulting root url. Defaults to `http`.

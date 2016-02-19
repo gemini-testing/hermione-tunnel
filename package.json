@@ -9,6 +9,7 @@
     "test",
     "tunnel"
   ],
+  "main": "lib/plugin.js",
   "author": "Alexey Rybakov <alexrybakov@yandex.ru> (https://github.com/flackus)",
   "license": "MIT",
   "repository": {
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "lodash": "^3.10.1",
+    "q": "^1.4.1",
     "ssh-tun": "^1.0.0"
   },
   "devDependencies": {
@@ -35,6 +37,8 @@
     "istanbul": "^0.4.1",
     "jscs": "^2.6.0",
     "jshint": "^2.8.0",
+    "mocha": "^2.4.5",
+    "qemitter": "^1.1.0",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0"
   }
