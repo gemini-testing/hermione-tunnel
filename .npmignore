@@ -1,0 +1,7 @@
+.gitignore
+.jshintignore
+.jshintrc
+.jscsrc
+.npmignore
+test/
+coverage/
