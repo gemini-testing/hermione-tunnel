@@ -1,6 +1,6 @@
 {
   "name": "hermione-tunnel",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Plugin for setting up ssh tunnel while running tests with Hermione",
   "keywords": [
     "hermione",
