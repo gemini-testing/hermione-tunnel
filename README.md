@@ -33,3 +33,17 @@ plugins: {
     }
 }
 ```
+
+## FAQ
+### Tunnel to example.com closed. Exit code: 255
+Usually it's a problem with permissions to the host (`example.com` in this example). You can manually create an ssh tunnel. Let's assume that you want to open a tunnel from `localhost:8080` to `example.com:9000`.
+
+Run the following command.
+```
+$ ssh -v example.com -R 9000:localhost:8080 -N
+```
+
+And open an url `http://example.com:9000/` in a browser.
+
+### Error: timeout of 60000ms exceeded. Ensure the done() callback is being called in this test.
+First of all, make sure that `done()` is executed in the test. If so, then this error means that Selenium grid doesn't have permissions to the tunneled host. Please ask your administrator to fix this issue.
